@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANUP MODS — Cyberpunk Matrix UI</title>
+    <!-- Google Fonts: Orbitron -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Matrix Rain Background Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Main Cyberpunk Dashboard Container -->
+    <div class="dashboard-wrapper">
+        <div class="main-panel" id="mainPanel">
+            
+            <!-- Animated RGB Border Ball -->
+            <div class="orbit-ball" id="orbitBall"></div>
+
+            <!-- Header Section -->
+            <div class="header-section">
+                <span class="secure-text">// SECURE MATRIX</span>
+                <span class="live-badge"><span class="pulse-dot"></span> LIVE</span>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="profile-card">
+                <div class="avatar-frame">
+                    <img src="img.jpg" alt="Profile Avatar" onerror="this.src='https://via.placeholder.com/72'">
+                </div>
+                <div class="profile-info">
+                    <h1 class="brand-title">ANUP MODS</h1>
+                    <p class="brand-sub">NEURAL ACCESS SYSTEM</p>
+                </div>
+            </div>
+
+            <!-- Status Grid Cards -->
+            <div class="status-grid">
+                <div class="status-card">
+                    <span class="stat-main cyan">ACTIVE</span>
+                    <span class="stat-sub">SHIELD</span>
+                </div>
+                <div class="status-card">
+                    <span class="stat-main pink">V5.5</span>
+                    <span class="stat-sub">BYPASS</span>
+                </div>
+                <div class="status-card">
+                    <span class="stat-main green">READY</span>
+                    <span class="stat-sub">NODE</span>
+                </div>
+            </div>
+
+            <!-- Target Node Section -->
+            <div class="target-node-section">
+                <span class="target-label">// TARGET NODE</span>
+                <button class="node-dropdown-btn" id="nodeBtn" onclick="toggleNodePopup()">
+                    <span id="selectedNodeText">NODE 01 / FAST</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+            </div>
+
+            <!-- Generate Key Button -->
+            <button class="generate-key-btn" id="generateBtn" onclick="handleGenerateKey()">
+                GENERATE KEY
+            </button>
+
+            <!-- Footer Section -->
+            <div class="footer-section">
+                <span class="footer-text">NEON MATRIX v5.0 - 2026</span>
+                <div class="audio-bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar active-bar"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Node Selection Modal Popup -->
+    <div class="node-modal" id="nodeModal">
+        <div class="modal-content">
+            <h3>SELECT NODE</h3>
+            <div class="node-option" onclick="selectNode('NODE 01 / FAST')">NODE 01 / FAST</div>
+            <div class="node-option" onclick="selectNode('NODE 02 / STEALTH')">NODE 02 / STEALTH</div>
+            <div class="node-option" onclick="selectNode('NODE 03 / BACKUP')">NODE 03 / BACKUP</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
