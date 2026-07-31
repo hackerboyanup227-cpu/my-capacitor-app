@@ -1,0 +1,6 @@
+{
+  "appId": "com.hackerboy.myapp",
+  "appName": "My App",
+  "webDir": ".",
+  "bundledWebRuntime": false
+}
